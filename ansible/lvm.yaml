@@ -1,0 +1,5 @@
+- hosts: test
+  remote_user: root
+  tasks:
+  - name: lvm
+    command: pvcreate /dev/sdb
