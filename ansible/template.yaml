@@ -1,0 +1,7 @@
+- host: test
+  remote_user: root
+  tasks:
+  - name: temp
+      template:
+        src:
+        dest:

@@ -1,0 +1,11 @@
+- hosts: test
+  remote_user: root
+  tasks:
+  - name: 安装lrzsz
+    yum:
+      name: lrzsz
+      state: latest
+  - name: 重启软件
+    service:
+      name: httpd
+      state: restarted

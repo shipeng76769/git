@@ -1,0 +1,13 @@
+- hosts: test
+  remote_user: root
+  tasks:
+  - name: 文件
+    file:
+      path: /opt/devops
+      state: directory
+      mode: 0755 
+  - name: 文件
+    file:
+      path: /opt/devops/ss.conf
+      state: touch
+      mode: 0644

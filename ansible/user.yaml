@@ -1,0 +1,13 @@
+- hosts: test
+  remote_user: root
+  tasks: 
+  - name: 用户创建
+    user:
+      name: test
+      shell: /sbin/nologin 
+      append: yes
+  - name: 用户删除
+    user:
+      name: test
+      state: absent
+      remove: yes
